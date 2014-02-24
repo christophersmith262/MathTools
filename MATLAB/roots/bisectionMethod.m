@@ -1,6 +1,9 @@
 %
-% bisectionMethod(f, a, b, acc, max, debug)
+% bisectionMethod(f, var, a, b, acc=0.001, max=100, debug=false)
+%
 % By: Christopher Smith
+%
+% Usage: syms x; bisectionMethod(x-3, x, -5, 5)
 %
 % Description:
 %
@@ -9,11 +12,14 @@
 %
 % Arguments:
 %
-%    f:   the function to be evaluated
-%    a:  The left end point of the interval to check
-%    b:  The right end point of the interval to check
-%    acc: the desired accuracy of the result
-%    max: the maximum number of iterations to try
+%    f:     the function to be evaluated
+%    var:   the independent variable
+%    a:     the left end point of the interval to check
+%    b:     the right end point of the interval to check
+%    acc:   the desired accuracy of the result
+%    max:   the maximum number of iterations to try
+%    debug: if set to true debug info will be printed and
+%           'max' iterations are garenteed to be run
 %
 % Returns:
 %

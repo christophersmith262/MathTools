@@ -1,6 +1,9 @@
 %
-% secantMethod(f, x0, x1, acc, max, debug)
+% secantMethod(f, var, x0, x1, acc=0.001, max=100, debug=false)
+%
 % By: Christopher Smith
+%
+% Usage: syms x; secantMethod(x-3, x -3, 3)
 %
 % Description:
 %
@@ -9,11 +12,14 @@
 %
 % Arguments:
 %
-%    f:   the function to be evaluated
-%    x0:  The first initial guess
-%    x1:  The second initial guess
-%    acc: the desired accuracy of the result
-%    max: the maximum number of iterations to try
+%    f:     the function to be evaluated
+%    var:   the independent variable
+%    x0:    The first initial guess
+%    x1:    The second initial guess
+%    acc:   the desired accuracy of the result
+%    max:   the maximum number of iterations to try
+%    debug: if set to true debug info will be printed and
+%           'max' iterations are garenteed to be run
 %
 % Returns:
 %
